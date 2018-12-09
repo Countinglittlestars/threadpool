@@ -17,18 +17,13 @@ public class AsyncTask {
 
     }
 
-    //@****()   实现一个方法，让其最多能有指定大小个线程在执行而已？？
-//    //考虑分布式问题？
-//    @Async("myCountPool")
-//    public void doTask2(int i) throws InterruptedException{
-//        System.out.println(Thread.currentThread().getName()+"开始执行");
-//        Thread.sleep(3000);
-//        System.out.println(Thread.currentThread().getName()+"执行完毕");
-//
-//    }
+    @Async("myCountPool")  //myTaskAsynPool即配置线程池的方法名，此处如果不写自定义线程池的方法名，会使用默认的线程池
+    public void doTask2(int i) throws InterruptedException{
+        System.out.println(Thread.currentThread().getName()+"开始执行");
+        Thread.sleep(3000);
+        System.out.println(Thread.currentThread().getName()+"执行完毕");
 
-
-
+    }
 
 
 
